@@ -8,7 +8,7 @@
 <body>
 
 <script type="text/javascript">
-  document.querySelector('button').addEventListener('click', () => window.opener.postMessage({token: 'aaa', secret: 'bbb'}, '*'));
+  window.opener.postMessage({token: 'aaa', secret: 'bbb'}, '*');
 </script>
 
 </body>
