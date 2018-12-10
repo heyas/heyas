@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Popup</title>
+  <button>Отправить</button>
 </head>
 <body>
 
 <script type="text/javascript">
-  window.opener.postMessage({token: 'aaa', secret: 'bbb'}, 'http://localhost');
+  document.querySelector('button').addEventListener('click', () => window.opener.postMessage({token: 'aaa', secret: 'bbb'}, '*'));
 </script>
-	
+
 </body>
 </html>
